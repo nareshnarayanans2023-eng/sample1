@@ -26,9 +26,10 @@ pipeline {
         stage('Deploy to K8s') {
             steps {
                 echo 'Deploying to Kubernetes Cluster...'
-                sh 'kubectl apply -f deployment.yaml'
+                bat 'kubectl apply -f deployment.yaml'
             }
         }
+
 
     }
 }
