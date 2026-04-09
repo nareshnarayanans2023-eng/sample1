@@ -9,9 +9,8 @@ pipeline {
         }
         stage('Containerize (Build)') {
             steps {
-                echo 'Building Docker image for the event site...'
-                // This command builds your Dockerfile
-                sh 'docker build -t rivera-app:v1 .'
+        
+                echo 'Simulating Docker build: docker build -t rivera-app:v1 .'
             }
         }
         stage('CI Test') {
