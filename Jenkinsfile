@@ -23,5 +23,12 @@ pipeline {
                 echo 'Pipeline complete. Application is ready for Kubernetes.'
             }
         }
+        stage('Deploy to K8s') {
+            steps {
+                echo 'Deploying to Kubernetes Cluster...'
+                sh 'kubectl apply -f deployment.yaml'
+            }
+        }
+
     }
 }
